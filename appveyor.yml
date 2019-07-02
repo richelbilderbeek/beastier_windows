@@ -26,6 +26,7 @@ build_script:
   - # git clone https://github.com/richelbilderbeek/test_beastier_on_windows.git .
   - travis-tool.sh install_github ropensci/beautier
   - travis-tool.sh install_github ropensci/tracerer
+  - wget https://raw.githubusercontent.com/ropensci/beastier/master/DESCRIPTION
   - travis-tool.sh install_deps
   - git clone https://github.com/richelbilderbeek/test_beastier_on_windows.git
   - move test_beastier_on_windows/inst/ inst
