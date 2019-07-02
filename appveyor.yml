@@ -22,6 +22,7 @@ environment:
     USE_RTOOLS: true
 
 build_script:
+  - rmdir /Q /S .git
   - git clone https://github.com/richelbilderbeek/test_beastier_on_windows.git .
   - travis-tool.sh install_github ropensci/beautier
   - travis-tool.sh install_github ropensci/tracerer
