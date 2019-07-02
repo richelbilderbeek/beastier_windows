@@ -29,6 +29,7 @@ build_script:
   - wget --no-check-certificate https://raw.githubusercontent.com/ropensci/beastier/master/DESCRIPTION
   - travis-tool.sh install_deps
   - git clone https://github.com/richelbilderbeek/test_beastier_on_windows.git
+  - dir
   - move test_beastier_on_windows/inst/ inst
   - move test_beastier_on_windows/man/ man
   - move test_beastier_on_windows/R/ R
