@@ -25,8 +25,14 @@ build_script:
   - travis-tool.sh install_github ropensci/beautier
   - travis-tool.sh install_github ropensci/tracerer
   - travis-tool.sh install_deps
-  - git clone https://github.com/richelbilderbeek/test_beastier_on_windows.git
-  - cd test_beastier_on_windows
+  - git clone https://github.com/richelbilderbeek/test_beastier_on_windows.git .
+  - #git clone https://github.com/richelbilderbeek/test_beastier_on_windows.git
+  - #move test_beastier_on_windows/inst/ inst
+  - #move test_beastier_on_windows/man/ man
+  - #move test_beastier_on_windows/R/ R
+  - #move test_beastier_on_windows/tests/ tests
+  - #move test_beastier_on_windows/vignettes/ vignettes
+  - #move test_beastier_on_windows/*.* .
   - Rscript -e "source(\"R/install_beast2.R\"); source(\"R/get_default_beast2_download_url.R\"); source(\"R/check_os.R\"); install_beast2()"
   - Rscript -e "source(\"R/get_default_beast2_folder.R\"); source(\"R/get_default_beast2_jar_path.R\"); source(\"R/check_os.R\"); print(get_default_beast2_jar_path())"
 
